@@ -13,7 +13,15 @@ stages:
 - stage: Build
   jobs:
   - job: BuildNodeApp
-    steps:
+    steps:    
+    - script: |
+        echo "XXXXXXXXXXXXXXXXXXX"
+        pwd
+        ls -ltrh      
+        echo "XXXXXXXXXXXXXXXXXXX"
     - task: Npm@1
+      inputs:
+        command: 'install'
+        workingDir: '/NodejsWebApp1/'
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
