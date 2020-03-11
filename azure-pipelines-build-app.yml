@@ -18,10 +18,12 @@ stages:
         echo "XXXXXXXXXXXXXXXXXXX"
         pwd
         ls -ltrh      
+        cd NodejsWebApp1
+        pwd
         echo "XXXXXXXXXXXXXXXXXXX"
     - task: Npm@1
       inputs:
         command: 'install'
-        workingDir: 'NodejsWebApp1/package.json'
+        workingDir: '$(System.DefaultWorkingDirectory)/NodejsWebApp1/package.json'
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
