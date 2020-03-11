@@ -31,3 +31,7 @@ stages:
         gulpFile: '$(System.DefaultWorkingDirectory)/NodejsWebApp1/gulpfile.js'
         targets: 
         enableCodeCoverage: false
+    - task: Npm@0
+      inputs:
+        cwd: '$(System.DefaultWorkingDirectory)/NodejsWebApp1/'
+        command: 'test'
