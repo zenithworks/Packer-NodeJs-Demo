@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  system.debug: true
+  skipComponentGovernanceDetection: false
+
 stages:
 - stage: Build
   jobs:
