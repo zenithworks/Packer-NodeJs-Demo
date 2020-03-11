@@ -22,6 +22,6 @@ stages:
     - task: Npm@1
       inputs:
         command: 'install'
-        workingDir: '/NodejsWebApp1/'
+        workingDir: 'NodejsWebApp1/package.json'
     - script: echo Hello, world!
       displayName: 'Run a one-line script'
