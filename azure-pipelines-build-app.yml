@@ -22,7 +22,8 @@ stages:
         pwd
         echo "XXXXXXXXXXXXXXXXXXX"
     - script: |
-        npm install $(System.DefaultWorkingDirectory)/NodejsWebApp1/package.json
+        cd $(System.DefaultWorkingDirectory)/NodejsWebApp1/
+        npm install 
 #    - task: Npm@1
 #      inputs:
 #        command: 'install'
