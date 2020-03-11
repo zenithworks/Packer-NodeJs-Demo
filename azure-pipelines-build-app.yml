@@ -26,4 +26,8 @@ stages:
         cd $(System.DefaultWorkingDirectory)/NodejsWebApp1/
         npm install 
       displayName: install npm
-
+    - task: Gulp@1
+      inputs:
+        gulpFile: '$(System.DefaultWorkingDirectory)/NodejsWebApp1/gulpfile.js'
+        targets: 
+        enableCodeCoverage: false
