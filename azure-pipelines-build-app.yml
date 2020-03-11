@@ -35,3 +35,14 @@ stages:
       inputs:
         cwd: '$(System.DefaultWorkingDirectory)/NodejsWebApp1/'
         command: 'test'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/NodejsWebApp1'
+        artifact: 'app_binary'
+        publishLocation: 'pipeline'  
+      
